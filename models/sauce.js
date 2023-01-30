@@ -8,10 +8,10 @@ const sauceSchema = mongoose.Schema({
     mainPepper: { type: String, required: true },  // le principale ingédient épicé de la sauce
     imageUrl: { type: String, required: true },  //l'URL de l'image de la sauce téléchargé par l'utilisateur
     heat: { type: Number, required: true },  // nombre entre 1 et 10 décrivant la sauce
-    likes: { type: Number, required: false },  // nombre d'utilisateurs qui aiment
-    dislikes: { type: Number, required: false },  // nombre d'utilisateurs qui n'aiment pas
-    usersLiked: { type: ["String<userId>"], required: false },  // tableau des identifiants utilisateurs qui ont aimé
-    usersDisliked: { type: ["String<userId>"], required: false },  // tableau des identifiants utilisateurs qui n'ont pas aimé
+    likes: { type: Number, required: true },  // nombre d'utilisateurs qui aiment
+    dislikes: { type: Number, required: true },  // nombre d'utilisateurs qui n'aiment pas
+    usersLiked: { type: [String], required: true },  // tableau des identifiants utilisateurs qui ont aimé
+    usersDisliked: { type: [String], required: true },  // tableau des identifiants utilisateurs qui n'ont pas aimé
 });
 
 
